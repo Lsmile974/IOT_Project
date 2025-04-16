@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jeu Simon</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1><img src="asset/logo.jpg" alt="Simon Memory" class="logo" /></h1>
+  </header>
+
+  <main>
+    <section id="menu-screen">
+      <div class="settings">
+        <h2>Choisissez votre difficultées</h2>
+
+        <label for="color-count">Nombre de couleurs :</label>
+        <select id="color-count">
+          <option value="2">2</option>
+          <option value="4" selected>4</option>
+        </select>
+
+        <label for="speed">Vitesse :</label>
+        <select id="speed">
+          <option>Rapide</option>
+          <option selected>Moyenne</option>
+          <option>Lente</option>
+        </select>
+
+        <label for="sequence-length">Longueur :</label>
+        <select id="sequence-length">
+          <option>Courte</option>
+          <option selected>Moyenne</option>
+          <option>Longue</option>
+        </select>
+
+        <button id="start-button">Démarrer le jeu</button>
+      </div>
+    </section>
+
+    <section id="game-screen" style="display: none;">
+      <div class="game-info">
+        <p><strong>Niveau :</strong> <span id="level-display">1</span></p>
+        <p><strong>Score :</strong> <span id="score-display">0</span></p>
+      </div>
+      
+      <div class="color-grid">
+        <div class="color-button red" data-color="red">
+          <img src="asset/rouge.jpg" alt="Red" />
+        </div>
+        <div class="color-button green" data-color="green">
+          <img src="asset/vert.jpg" alt="Green" />
+        </div>
+        <div class="color-button blue" data-color="blue">
+          <img src="asset/bleu.jpg" alt="Blue" />
+        </div>
+        <div class="color-button yellow" data-color="yellow">
+          <img src="asset/jaune.jpg" alt="Yellow" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
